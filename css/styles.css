@@ -1,0 +1,136 @@
+html{
+	font-family: Open Sans, sans-serif;
+	font-size: 16px; /* root font-size; "rems" are based on it.*/
+	line-height: normal;
+}
+
+body {
+	margin: 0;
+}
+  
+
+/* Main  Navigation */
+
+#navigation{
+	max-width: 80rem;
+	margin: 0 auto;
+	display: flex; /* make this a flex container */
+}
+
+#navigation .logo{
+	display:block;
+	line-height: 48px;
+	color: #000;
+	font-weight: 700;
+	font-size: 1.3rem;
+	text-decoration: none;
+}
+
+#navigation .logo img{
+	width: 150px;
+	height: 55px;
+	margin: 3px 2px 0 16px;
+	vertical-align: middle;
+}
+
+#navigation .span-one{
+	font-size: 14px;
+	color: #595959;
+}
+
+
+.sideMenu{
+	margin-left: auto;
+	align-self:center;
+}
+.sideMenu a{
+	display: block;
+	cursor: pointer;
+}
+
+
+
+/* Sub Navigation */
+
+#subNav{
+	border-top: 1px solid #eaeaea;
+}
+
+#subNav ul{
+	max-width: 80rem;
+	margin: 0 auto;
+	padding: 0px;
+	display: flex;
+	align-items: center; /* centre items along row (or column)  */
+	flex-flow: row wrap;
+	min-height: 48px;
+}
+
+#subNav ul li{
+	list-style-type: none;  /* remove bullets */
+	white-space: nowrap;	/* keep link text on one line */
+	flex: 0 1 auto; /* the zeros here mean: do not grow or shrink */
+	margin: 0;
+}
+
+#subNav ul li a {
+	display: block;
+	color: #000;
+	text-decoration: none;
+	font-size: 16px;
+
+}
+
+#subNav ul li a.gem{
+	color: #545454;
+	font-size: 1.1rem;
+	padding: 11px 16px;
+}
+
+#subNav ul li a:hover{
+	text-decoration:none; 
+    border-bottom:3px solid #018463; 
+    padding-bottom:8px;  
+}
+
+ /* Footer. */
+#footer{
+	display:block;
+	background: #000;
+	color: #fff;
+	font-weight: lighter;
+}
+#footer ul{
+	max-width: 80rem;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	margin: 0 auto;
+	padding: 0;
+}
+#footer li{
+	list-style-type: none;
+	flex: 1 1 230px;
+	font-size: .75rem;
+	padding: 1rem;
+}
+#footer a{
+	color: #fff;
+	text-decoration: none;
+}
+#footer a:hover{
+	text-decoration: underline;
+}
+
+
+#footer li.extendedLogo figure { margin:0; }
+#footer li.extendedLogo img { width:220px; }
+
+#footer li.radioCanada a{ color: #fff; }
+
+/* Make our sidebar full side on smaller screens */
+@media (max-width: 1068px){
+	#content #sidebar{
+		flex-grow: 1;
+	}
+}
